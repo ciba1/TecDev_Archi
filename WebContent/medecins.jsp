@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pro_arch_b</title>
+
+    <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
+
+    <!-- navbar -->
+    <link rel="stylesheet" type="text/css" href="archProjMaster/style/home.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- DAtatable -->
+    <link rel="stylesheet" type="text/css" href="archProjMaster/style/datatable.css">
+    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css   ">
+
+
+    <script charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+</head>
+<body style="background-color: #5f5aaa">
+<!-- Content -->
+<div class="">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #37346b">
+
+        <!-- toglle_nav -->
+        <span class="navbar-toggler-icon
+                         navbar-toggler
+                         bg-info"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+            </span>
+        <!-- toglle_nav_end -->
+
+        <!-- LOGO -->
+        <a class="navbar-brand text-white" href="#">
+            <img src="archProjMaster/assets/logo_health.svg" width="65" height="65" class="d-inline-block align-top" alt="">
+        </a>
+        <!-- LOGO_end -->
+        -
+        <!-- List -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white text-center" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-center" href="#">Consultation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-center disabled" href="#" tabindex="-1" aria-disabled="true">Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-center" href="#">Drugs</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white text-center" href="#">Contacts<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- List_end -->
+
+    </nav>
+    <!-- navbar_end -->
+
+    <!-- liste_medecins -->
+    <!-- card_search -->
+    <div class="card bg-dark text-white border border-0">
+        <img src="archProjMaster/assets/medecin/medecin_card.jpg"
+             class="card-img img-fluid"
+             alt="stethoscope-fond-bleu"
+             style="min-height: 350px">
+        <div class="card-img-overlay p-5">
+            <h1 class="card-title"><strong>DiagnoVit</strong></h1>
+            <br><br>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text">n'import quoi!!</p>
+
+            <!-- Search -->
+            <div class="sticky-top py-4 row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Thesis's search">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text rounded-right m-0 border border-secondary" style="background-color: #5f5aaa">
+                                <i class="fas fa-search text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">tapez just des mots....</p>
+                </div>
+            </div>
+            <!-- Search_end -->
+        </div>
+    </div>
+    <!-- card_search_end -->
+
+    <!-- liste_medecins_end -->
+    <div class="row justify-content-center mt-3">
+        <div class="col-auto">
+            <h1 class="card-title text-white"><strong>Results</strong></h1>
+        </div>
+        <br>
+    </div>
+    <!-- card_result -->
+    <div class="container">
+        <!-- med_info -->
+        <div class="card my-3 border border-0 ">
+            <div class="row no-gutters" >
+                <div class="col-md-4 col-sm-4 ">
+                    <img src="archProjMaster/assets/medecin/doc.jpg" class="card-img img-fluid" alt="diagnostique-coeur"  style="height: 100%;">
+                </div>
+                <div class="col-md-8 col-sm-8">
+                    <div class="card-body mx-3 p-5">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <h2 class="card-title"><strong>FLAN BenFlan</strong></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="card-text"><strong>Medecin</strong> Radiologue</h3><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Cité kda mena menhik B1 num 22, Birkhadem, Alger....</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class=""><strong>Du</strong> Dimanche-Jeudi <strong>08h-12h</strong> et <strong>13h-17h</strong></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class=""><strong>LE</strong> Samedi et Mardi <strong>08h-12h</strong> et <strong>13h-17h</strong></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">See More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- med_info -->
+
+        <!-- modal_medcin -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto mb-3">
+                                        <img class="rounded-circle"
+                                             src="archProjMaster/assets/medecin/doc.jpg"
+                                             alt=""
+                                             width="100px"
+                                             height="100px"
+                                             style="border: 4px solid #5f5aaa"
+                                        >
+                                    </div>
+                                    <div class="col-auto mb-3">
+                                        <h4>
+                                            <strong>FLAN</strong>BenFlan
+                                        </h4>
+                                    </div>
+                                    <div class="col-auto mb-3">Medecin Radiologue</div>
+                                    <div class="col-auto mb-3">+213-XXX-XXX-XXX</div>
+                                    <div class="col-auto">
+                                        <div class="row justify-content-center">
+                                            <p>Dimanche-Jeudi</p>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <p><strong>08h-12h</strong> et <strong>13h-17h</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="row justify-content-center">
+                                            <p>Samedi et Mardi</p>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <p><strong>09h30-12h</strong> et <strong>13h-15h30</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <h4>Address</h4>
+                                        <p>Cité kda mena menhik B1 num 22, Birkhadem, Alger....</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mapouter">
+                                            <div class="gmap_canvas">
+                                                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=usdb&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal_medcin_end -->
+
+    </div>
+    <!-- card_result_end -->
+    <!-- liste_medecins_end -->
+
+    <!-- Contact_information -->
+    <div class="row justify-content-center pt-3 us_contact">
+
+        <div class="col-md-2">
+            <div class="row justify-content-center">
+                <i class="fas fa-mobile-alt so_med"></i>
+            </div>
+            <div class="row justify-content-center">
+                <p class="p_social_media">
+                    Tel: +213-XX-XX-XX-XX
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="row justify-content-center">
+                <i class="fas fa-envelope so_med"></i>
+            </div>
+            <div class="row justify-content-center">
+                <p class="p_social_media">
+                    TecDev@info.dz
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="row justify-content-center">
+                <i class="fas fa-map-marker-alt so_med"></i>
+            </div>
+            <div class="row justify-content-center">
+                <p class="p_social_media">
+                    USDB, BLIDA, ALGERIA...
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="row justify-content-center">
+                <i class="fab fa-facebook-square so_med"></i>
+            </div>
+            <div class="row justify-content-center">
+                <p class="p_social_media">
+                    TecDev_Groupe8
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center powredby" style="background-color: #37346b">
+        <img src="archProjMaster/assets/tecdevlogo.svg" alt="tecdevlogo" height="70" width="180">
+    </div>
+    <!-- Contact_information_end -->
+
+</div>
+<!-- Content_end -->
+</body>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+</html>
