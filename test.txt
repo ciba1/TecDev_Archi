@@ -6,3 +6,11 @@ use this...
 Then
 	cd TecDev_Archi
 and start working....
+
+if you are satisfied with your work use this...
+	1/ git add . (to add all new files or modified files)
+	2/ git status (just for verify)
+	3/ git commit -m "add your comment" (comment your commit)
+	4/ git push (pushing the new data into github)
+
+good_luck
