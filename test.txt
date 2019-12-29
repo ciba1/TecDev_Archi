@@ -1,1 +1,8 @@
 rana bedelnah (lazem nnibo fo9 17/20) lol
+
+
+use this...
+	git clone https://github.com/ciba1/TecDev_Archi.git
+Then
+	cd TecDev_Archi
+and start working....
