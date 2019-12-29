@@ -43,7 +43,7 @@ x            </span>
 
         <!-- List -->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <!-- list_menu1 -->
+            <!-- list_menu -->
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link text-white text-center" href="#about">About</a>
@@ -62,7 +62,7 @@ x            </span>
                     <a class="nav-link text-white text-center" href="#contact">Contacts<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <!-- list_menu1_end -->
+            <!-- list_menu_end -->
 
             <!-- Sign_IN -->
             <form class="form-inline my-2 my-lg-0 mx-2">
