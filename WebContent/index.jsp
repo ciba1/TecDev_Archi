@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
+
     <!-- navbar -->
     <link rel="stylesheet" type="text/css" href="archProjMaster/style/home.css">
     <!-- fontawesome -->
@@ -46,7 +46,7 @@ x            </span>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link text-white text-center" href="#about">About</a>
-                 
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white text-center" href="#doctor">Consultation</a>
@@ -61,6 +61,18 @@ x            </span>
                     <a class="nav-link text-white text-center" href="#contact">Contacts<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+
+            <!-- Sign_IN -->
+            <form class="form-inline my-2 my-lg-0 mx-2">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SignIN</button>
+            </form>
+            <!-- Sign_IN_end -->
+
+            <!-- Sign_UP -->
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SignUP</button>
+            </form>
+            <!-- Sign_UP_end -->
         </div>
         <!-- List_end -->
 
@@ -313,9 +325,9 @@ x            </span>
                         Ut wisi enim ad minim
                     </p>
                     <form action="Versdiagnostique" method="post">
-                 
+
                          <button class="btn btn-outline-primary landing">Click Me</button>
-                   
+
                     </form>
                 </div>
             </div>
