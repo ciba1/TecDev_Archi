@@ -56,9 +56,10 @@ public class home extends HttpServlet {
 		    	  System.out.println("resultat aquis");
 		       HttpSession session = request.getSession();
 		       System.out.print(" idpatient = "+rs.getInt("idpatient")+"  ");
+		     //  request.setAttribute("key", "value");
 			  session.setAttribute("uname", rs.getInt("idpatient"));
 		       
-		        response.sendRedirect("index.jsp");
+		        response.sendRedirect("/e_health/index");
 		        
 		      }else {
 		        out.println("Wrong id and password");

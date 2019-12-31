@@ -1,3 +1,6 @@
+<%@page import="src.medicament"%>
+<%@page import="java.util.ArrayList"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,19 +61,19 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">About</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Consultation</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#doctor">Consultation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center disabled" href="#" tabindex="-1" aria-disabled="true">Doctors</a>
+                    <a class="nav-link text-white text-center " href="/e_health/home.jsp#doctor" >Doctors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Drugs</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#drugs">Drugs</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-white text-center" href="#">Contacts<span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#contact">Contacts<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -95,86 +98,45 @@
             </div>
         </div>
 
-        <div class="my-5">
+         <div class="my-5">
             <table id="example" class="table table-striped" style="width:100% ;background-color: #a9a7e5">
                 <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Type</th>
-                    <th>utilisation</th>
-                    <th>Effets</th>
+                    <th>effets</th>
+                    <th>Prix</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>sblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr>
-                <tr>
-                    <td>qblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>pblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>oblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>iblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>ublabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>ublabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>yblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>tblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>rblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>eblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>zblabla1</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr>
-                </tbody>
+                
+                    <% 
+              ArrayList<medicament> med=(ArrayList<medicament>)request.getAttribute("medph");
+		   for(medicament i:med) {
+		    	 out.print("<tr>"); 
+		    	
+		    	 out.print("<td> "); 
+		            out.print(i.getLable());  
+		         out.print("</td>"); 
+		        
+		         out.print("<td> "); 
+		            out.print(i.getEffets());  
+		         out.print("</td>"); 
+                     
+                out.print("<td>");  
+                    out.print(i.getPrix()); 
+                out.print("</td>");
+                
+                 out.print("</tr>"); 
+ 		    	     
+		     }   %>    
+		         </tbody>
                 <tfoot>
                 <tr>
                     <th>Nom</th>
-                    <th>Type</th>
-                    <th>utilisation</th>
-                    <th>Effets</th>
+                      <th>effets</th>
+                    <th>Prix</th>
+                    
                 </tr>
                 </tfoot>
             </table>

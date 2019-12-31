@@ -57,20 +57,20 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">About</a>
+                  <a class="nav-link text-white text-center" href="/e_health/home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Consultation</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#doctor">Consultation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center disabled" href="#" tabindex="-1" aria-disabled="true">Doctors</a>
+                    <a class="nav-link text-white text-center " href="/e_health/home.jsp#doctor" >Doctors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Drugs</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#drugs">Drugs</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-white text-center" href="#">Contacts<span class="sr-only">(current)</span></a>
-                </li>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#contact">Contacts<span class="sr-only">(current)</span></a>
+                 </li>
             </ul>
         </div>
         <!-- List_end -->
