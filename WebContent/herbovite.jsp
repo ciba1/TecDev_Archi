@@ -1,3 +1,7 @@
+<%@ page import=" src.medicament,java.util.ArrayList" %>
+
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,7 @@
 
 
     <!-- DAtatable -->
-    <link rel="stylesheet" type="text/css" href="style/datatable.css">
+    <link rel="stylesheet" type="text/css" href="archProjMaster/style/datatable.css">
     <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css   ">
@@ -50,7 +54,7 @@
 
         <!-- LOGO -->
         <a class="navbar-brand text-white" href="#">
-            <img src="assets/logo_health.svg" width="65" height="65" class="d-inline-block align-top" alt="">
+            <img src="archProjMaster/assets/logo_health.svg" width="65" height="65" class="d-inline-block align-top" alt="">
         </a>
         <!-- LOGO_end -->
 -
@@ -58,19 +62,19 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">About</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Consultation</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#doctor">Consultation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center disabled" href="#" tabindex="-1" aria-disabled="true">Doctors</a>
+                    <a class="nav-link text-white text-center " href="/e_health/home.jsp#doctor" >Doctors</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="#">Drugs</a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#drugs">Drugs</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link text-white text-center" href="#">Contacts<span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#contact">Contacts<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -100,81 +104,35 @@
                 <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Type</th>
-                    <th>utilisation</th>
-                    <th>Effets</th>
+                    <th>effets</th>
+                   <th>Prix</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>sblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr>
-                <tr>
-                    <td>qblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>pblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>oblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>iblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>ublabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>ublabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>yblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>tblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>rblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>eblabla</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr><tr>
-                    <td>zblabla1</td>
-                    <td>blabla</td>
-                    <td>blablabla</td>
-                    <td>blablabla</td>
-                </tr>
-                </tbody>
+               
+                    <% 
+                  ArrayList<medicament> med = (ArrayList<medicament>) request.getAttribute("med");
+		      
+		     for(medicament item: med){
+		    	 out.print("<tr><td>"); 
+		    	 out.print(item.getLable());  
+		         out.print("</td><td>");
+	             out.print(item.getEffets());  
+		         out.print("</td><td>");
+                 out.print(item.getPrix()); 
+                 out.print("</td></tr>");
+            //testi psk maraho ybanli écrakk
+              }
+                     %>    
+		  
+                 </tbody>
                 <tfoot>
                 <tr>
                     <th>Nom</th>
-                    <th>Type</th>
-                    <th>utilisation</th>
-                    <th>Effets</th>
+                      <th>effets</th>
+                    <th>Prix</th>
+                    
                 </tr>
                 </tfoot>
             </table>
@@ -230,7 +188,7 @@
         </div>
     </div>
     <div class="row justify-content-center powredby" style="background-color: #37346b">
-        <img src="assets/tecdevlogo.svg" alt="tecdevlogo" height="70" width="180">
+        <img src="archProjMaster/assets/tecdevlogo.svg" alt="tecdevlogo" height="70" width="180">
     </div>
     <!-- Contact_information_end -->
 

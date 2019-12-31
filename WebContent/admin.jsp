@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>pro_arch_b</title>
-    <link rel="stylesheet" type="text/css" href="style/admin.css">
+    <link rel="stylesheet" href="archProjMaster/style/admin.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
@@ -190,7 +190,7 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">patients</div>
-                                    <div class="h5 mb-0 font-weight-bold  text-gray-800"><span class="badge badge-pill badge-danger">$40,000</span></div>
+                                    <div class="h5 mb-0 font-weight-bold  text-gray-800"><span class="badge badge-pill badge-danger">40</span></div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-user-injured fa-3x text-danger"></i>
