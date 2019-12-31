@@ -779,5 +779,7 @@ a.text-dark:hover, a.text-dark:focus {
 .text-gray-900 {
     color: #3a3b45 !important;
 }
-/*-----------------------------Charts--------------------------------*/
-
+/*-----------------------------Table--------------------------------*/
+.act:hover{
+    text-decoration: none;
+}

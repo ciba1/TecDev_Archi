@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>pro_arch_b</title>
-    <link rel="stylesheet" type="text/css" href="style/admin.css">
+    <link rel="stylesheet" type="text/css" href="archProjMaster/admin.css">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
@@ -15,6 +15,18 @@
 
     <!-- import plugin script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <!-- DAtatable -->
+    <link rel="stylesheet" type="text/css" href="style/datatable.css">
+
+    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css   ">
+
+
+    <script charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
 </head>
 <body>
@@ -33,7 +45,7 @@
             <div class="sidebar-header">
                 <div class="user-pic">
                     <img class="img-responsive img-rounded"
-                         src="archProjMaster/assets/harouz.jpg"
+                         src="assets/harouz.jpg"
                          alt="User picture"
                          style="border-radius: 50%; height: 55px; width: 55px"
                     >
@@ -159,7 +171,7 @@
         </div>
     </nav>
     <!-- sidebar-wrapper  -->
-    <main class="page-content" style="background-color: #a9a7ce; height: 2000px">
+    <main class="page-content" style="background-color: #a9a7ce;">
         <div class="container-fluid">
 
             <!-- nbr -->
@@ -282,6 +294,369 @@
                     </div>
                 </div>
             </div>
+
+            <!-- doctors crud -->
+            <div class="row" id="doc_crud">
+                <div class="col-12">
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header py-3" style="background-color: #37346b">
+                            <h6 class="m-0 font-weight-bold text-white">Doctors CRUD</h6>
+                        </div>
+
+                        <div class="card-body" style="background-color: #5f5aaa">
+                            <div class="my-5">
+                                <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody >
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- patients crud -->
+            <div class="row" id="pat_crud">
+                <div class="col-12">
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header py-3" style="background-color: #37346b">
+                            <h6 class="m-0 font-weight-bold text-white">Patients CRUD</h6>
+                        </div>
+
+                        <div class="card-body" style="background-color: #5f5aaa">
+                            <div class="my-5">
+                                <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody >
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- drugs crud -->
+            <div class="row" id="drag_crud">
+                <div class="col-12">
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header py-3" style="background-color: #37346b">
+                            <h6 class="m-0 font-weight-bold text-white">Drugs CRUD</h6>
+                        </div>
+
+                        <div class="card-body" style="background-color: #5f5aaa">
+                            <div class="my-5">
+                                <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody >
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- herbo crud -->
+            <div class="row" id="herbo_crud">
+                <div class="col-12">
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header py-3" style="background-color: #37346b">
+                            <h6 class="m-0 font-weight-bold text-white">Herbo CRUD</h6>
+                        </div>
+
+                        <div class="card-body" style="background-color: #5f5aaa">
+                            <div class="my-5">
+                                <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody >
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="" class="btn btn-warning">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="" class="btn btn-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </main>
     <!-- page-content" -->
@@ -290,6 +665,8 @@
 </body>
 
 <script>
+
+    /* sidebar */
 
     $(".sidebar-dropdown > a").click(function() {
         $(".sidebar-submenu").slideUp(200);
@@ -384,7 +761,10 @@
         }
     });
 
-
+    /* dataTable */
+    $(document).ready(function() {
+        $('.tab').DataTable();
+    } );
 </script>
 
 <script>
