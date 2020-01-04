@@ -50,15 +50,14 @@ public class home extends HttpServlet {
 		    
 		    java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost/mydb","root","");
 		      Statement stmt = con.createStatement();
-		      ResultSet rs = stmt.executeQuery("select idpatient,login,motPasse from patient where login='"+uname+"' and motPasse='"+upass+"'");
+		      ResultSet rs = stmt.executeQuery("select * from patient where login='"+uname+"' and motPasse='"+upass+"'");
 		      
 		      if(rs.next()) {
-		    	  System.out.println("resultat aquis");
-		       HttpSession session = request.getSession();
-		       System.out.print(" idpatient = "+rs.getInt("idpatient")+"  ");
-		     //  request.setAttribute("key", "value");
-			  session.setAttribute("uname", rs.getInt("idpatient"));
+		    	  HttpSession session = request.getSession();
+		         request.setAttribute("name", rs.getString("nom")+" "+rs.getString("prenom"));
+		         request.setAttribute("username", uname);
 		       
+		         
 		        response.sendRedirect("/e_health/index");
 		        
 		      }else {

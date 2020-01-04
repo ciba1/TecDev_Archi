@@ -1,7 +1,5 @@
 <%@ page import=" src.medicament,java.util.ArrayList" %>
 
-
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +128,7 @@
                 <tfoot>
                 <tr>
                     <th>Nom</th>
-                      <th>effets</th>
+                    <th>effets</th>
                     <th>Prix</th>
                     
                 </tr>

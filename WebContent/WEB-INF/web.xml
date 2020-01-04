@@ -3,25 +3,20 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  
     <servlet-name>home</servlet-name>
     <servlet-class>pack.home</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>home</servlet-name>
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
-  <servlet-name>index</servlet-name>
+  <servlet>
+    <servlet-name>index</servlet-name>
     <servlet-class>pack.index</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>index</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
-  
 </web-app>

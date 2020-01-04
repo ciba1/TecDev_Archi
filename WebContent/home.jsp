@@ -65,15 +65,23 @@ x            </span>
             <!-- list_menu_end -->
 
             <!-- Sign_IN -->
-            <form class="form-inline my-2 my-lg-0 mx-2">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SignIN</button>
-            </form>
-            <!-- Sign_IN_end -->
+           <% /* String user =(String)request.getAttribute("name");
+           
+            int idUser  = 1;
+            if(false){	
+            out.print("<form class='form-inline my-2 my-lg-0 mx-2' action='VersLogin' method='get'>");
+            out.print("  <button name='login' class='btn btn-outline-success my-2 my-sm-0' type='submit' >SignIN</button>");
+            out.print("</form>");
+            out.print("<!-- Sign_IN_end -->");
 
-            <!-- Sign_UP -->
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SignUP</button>
-            </form>
+            out.print(" <!-- Sign_UP -->");
+            out.print(" <form class='form-inline my-2 my-lg-0'>");
+            out.print(" <button class='btn btn-outline-success my-2 my-sm-0' type='submit'>SignUP</button>");
+            out.print(" </form>");}
+            else{
+            	out.print("<h3 style='font-size:18px;color:green;'>"+user+"</h3>");
+            }*/
+            %>          
             <!-- Sign_UP_end -->
         </div>
         <!-- List_end -->
@@ -319,18 +327,18 @@ x            </span>
 
                 <!--  -->
                 <div class=" content_img_svg">
-                    <h1 class="text-dark h_land pt-2">TEST_TEST</h1>
-                    <p class="text-dark text-justify p_land">
-                        Lorem ipsum dolor sit amet,
-                        consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        Ut wisi enim ad minim
+                     <p class="text-dark text-justify p_land">
+                      DiagnoVit est un systeme d'analyse , concu pour faciliter votre orientation medicale 
+                      et evoquer pour vous les pathologies qui peuvent etre la cause des symptomes qui vous inquietent.
+                       Il ne peut remplacer une consultation medicale. Mais, a travers l'analyse d'une recherche que vous presentez, 
+                       DiagnoVit vous apporte des reponses simples et claires a votre question : 
+                      Quesqu'il m'arrive?
                     </p>
-                    <form action="Versdiagnostique" method="get">
+                  <form action="Versdiagnostique" method="get"> 
 
                          <button class="btn btn-outline-primary landing">Click Me</button>
 
-                    </form>
+                   </form>
                 </div>
             </div>
 
@@ -448,10 +456,7 @@ x            </span>
                         <label for="Name" class="user_label">Email address</label>
                         <input type="text" class="form-control user_imput" name="adress" id="Name" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="Email" class="user_label">Email address</label>
-                        <input type="text" class="form-control user_imput" name="motpasse" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-                    </div>
+                    
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-6">

@@ -1,6 +1,7 @@
 package pack;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -35,10 +36,8 @@ public class versherbovit extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//hiya lzem nediro méthode be teba3 we chaan mais nrml nkhdemo direct mena 
 		ArrayList<medicament> med = new ArrayList<medicament>();
-		
-		try {	Class.forName("com.mysql.jdbc.Driver");
+		  try {	Class.forName("com.mysql.jdbc.Driver");
 	    
 	    
 	      Connection con = DriverManager.getConnection("jdbc:mysql://localhost/mydb","root","");
