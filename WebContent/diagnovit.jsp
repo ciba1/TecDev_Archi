@@ -1,4 +1,4 @@
-<%@page import="src.maladiePossedeSymptome"%>
+<% @page import="src.maladiePossedeSymptome"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="src.maladie"%>
 <!DOCTYPE html>
@@ -130,7 +130,7 @@
    
 
     <!-- card_result -->
-    <%	/*out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
+    <%/*out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
     
    ArrayList<maladiePossedeSymptome> ms=(ArrayList<maladiePossedeSymptome>)request.getAttribute("maladiesymptome ");
    ArrayList<maladie> m=(ArrayList<maladie>)request.getAttribute("mal");//heda rehou null
