@@ -783,3 +783,19 @@ a.text-dark:hover, a.text-dark:focus {
 .act:hover{
     text-decoration: none;
 }
+
+/*-----------------------------Doctors_main-----------------------------*/
+.doctors_main{
+    background-image: url('../assets/admin/doc_crud.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: brightness(0.5);
+    padding: 20px;
+    padding-top: 100px;
+    height: 500px;
+}
+
+.doctors_card{
+    margin-top: -150px;
+}
