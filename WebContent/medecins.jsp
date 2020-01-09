@@ -215,6 +215,26 @@
                             </div>
 
                             <div class="col-8">
+                                <form action="" class="my-3">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input id="datepicker" placeholder="make appointment"/>
+                                            <script>
+                                                $('#datepicker').datepicker({
+                                                    uiLibrary: 'bootstrap4'
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="col-6">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Time</option>
+                                                <option>10h00</option>
+                                                <option>11h00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
                                 <div class="row">
                                     <div class="col-auto">
                                         <h4>Address</h4>
