@@ -282,12 +282,11 @@ style="border-radius: 50%; height: 55px; width: 55px"
 
         <!-- doctors_main -->
         <div style="display: none" id="doc_crud">
-
             <div class="row">
                 <div class="col-12" style="position: relative">
                     <div class="row doctors_main"></div>
                     <div class="row herbovite_text m-5 justify-content-center">
-                        <img src="archProjMaster/assets/tecdevlogo.svg"
+                        <img src="assets/tecdevlogo.svg"
                              alt=""
                              style="margin-top: 0px; max-height: 100%"
                         >
@@ -296,7 +295,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
             </div>
 
             <!-- doctors crud -->
-            <div class="row doctors_card">
+            <div class="row dash_card">
                 <div class="col-12">
                     <div class="card shadow mb-4">
 
@@ -345,7 +344,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                             <div class="row">
                                                                 <div class="col-12 mb-3">
                                                                     <img class="rounded-circle"
-                                                                         src="archProjMaster/assets/admin/ava_doc.png"
+                                                                         src="assets/admin/ava_doc.png"
                                                                          alt=""
                                                                          width="150px"
                                                                          height="150px"
@@ -438,45 +437,6 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                         <td>blabla</td>
                                         <td>blablabla</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>sblabla</td>
-                                        <td>blabla</td>
-                                        <td>blablabla</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>sblabla</td>
-                                        <td>blabla</td>
-                                        <td>blablabla</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>sblabla</td>
-                                        <td>blabla</td>
-                                        <td>blablabla</td>
-                                        <td>
                                             <a href="#"
                                                class="btn btn-warning"
                                                data-toggle="modal"
@@ -520,7 +480,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                                 <div class="row">
                                                                     <div class="col-12 mb-3">
                                                                         <img class="rounded-circle"
-                                                                             src="archProjMaster/assets/admin/ava_doc.png"
+                                                                             src="assets/admin/ava_doc.png"
                                                                              alt=""
                                                                              width="150px"
                                                                              height="150px"
@@ -652,275 +612,516 @@ style="border-radius: 50%; height: 55px; width: 55px"
             </div>
         </div>
 
-    <!-- patients crud -->
-    <div class="row" style="display: none" id="pat_crud">
-    <div class="col-12">
-    <div class="card shadow mb-4">
+        <!-- patients main -->
+        <div style="display: none" id="pat_crud">
+            <div class="row ">
+                <div class="col-12" style="position: relative">
+                    <div class="row patient_main"></div>
+                    <div class="row herbovite_text m-5 justify-content-center">
+                        <img src="assets/tecdevlogo.svg"
+                             alt=""
+                             style="margin-top: 0px; max-height: 100%"
+                        >
+                    </div>
+                </div>
+            </div>
 
-    <div class="card-header py-3" style="background-color: #37346b">
-    <h6 class="m-0 font-weight-bold text-white">Patients CRUD</h6>
-    </div>
+            <!-- patients crud -->
+            <div class="row dash_card">
+                <div class="col-12">
+                    <div class="card shadow mb-4">
 
-    <div class="card-body" style="background-color: #5f5aaa">
-    <div class="my-5">
-    <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
-    <thead>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody >
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </tfoot>
-    </table>
-    </div>
-    </div>
+                        <div class="card-header py-3" style="background-color: #37346b">
+                            <h6 class="m-0 font-weight-bold text-white">Patients CRUD</h6>
+                        </div>
 
-    </div>
-    </div>
-    </div>
+                        <div class="card-body" style="background-color: #5f5aaa">
+                            <div>
+                                <label for="btn_add_pat" class="text-white mr-3">Ajoutez Patient</label>
+                                <button id="btn_add_pat"
+                                        class="btn btn-outline-light"
+                                        data-toggle="modal"
+                                        data-target="#pat_modal"
+                                >
+                                    <i class="fas fa-user-plus"></i>
+                                </button>
 
-    <!-- drugs crud -->
-    <div class="row" style="display: none" id="drug_crud">
-    <div class="col-12">
-    <div class="card shadow mb-4">
+                                <!-- doc modal add -->
+                                <div class="modal fade"
+                                     id="pat_modal"
+                                     tabindex="-1"
+                                     role="dialog"
+                                     aria-labelledby="ModalLabel_pat"
+                                     aria-hidden="true"
+                                >
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="ModalLabel_pat">Modal title</h5>
+                                                <button type="button"
+                                                        class="close"
+                                                        data-dismiss="modal"
+                                                        aria-label="Close"
+                                                >
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
 
-    <div class="card-header py-3" style="background-color: #37346b">
-    <h6 class="m-0 font-weight-bold text-white">Drugs CRUD</h6>
-    </div>
+                                                <form action="">
 
-    <div class="card-body" style="background-color: #5f5aaa">
-    <div class="my-5">
-    <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
-    <thead>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody >
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </tfoot>
-    </table>
-    </div>
-    </div>
+                                                    <div class="row">
 
-    </div>
-    </div>
-    </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-3">
+                                                                    <img class="rounded-circle"
+                                                                         src="assets/admin/ava_doc.png"
+                                                                         alt=""
+                                                                         width="150px"
+                                                                         height="150px"
+                                                                         style="border: 4px solid #5f5aaa"
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="custom-file">
+                                                                <label for="customFile">Ajouter Photo</label>
+                                                                <input type="file" class="custom-file-input" id="customFile_p">
+                                                                <label class="custom-file-label" for="customFile_p">Choose file</label>
+                                                            </div>
+                                                        </div>
 
-    <!-- herbo crud -->
-    <div class="row" style="display: none" id="herbo_crud">
-    <div class="col-12">
-    <div class="card shadow mb-4">
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="nom_p_a" placeholder="Nom">
+                                                        </div>
 
-    <div class="card-header py-3" style="background-color: #37346b">
-    <h6 class="m-0 font-weight-bold text-white">Herbo CRUD</h6>
-    </div>
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="prenom_p_a" placeholder="Prenom">
+                                                        </div>
+                                                    </div>
 
-    <div class="card-body" style="background-color: #5f5aaa">
-    <div class="my-5">
-    <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
-    <thead>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody >
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    <tr>
-    <td>sblabla</td>
-    <td>blabla</td>
-    <td>blablabla</td>
-    <td>
-    <a href="#" class="btn btn-warning">
-    <i class="fas fa-edit"></i>
-    </a>
-    <a href="#" class="btn btn-danger">
-    <i class="fas fa-trash-alt"></i>
-    </a>
-    </td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-    <th>ID</th>
-    <th>Nom</th>
-    <th>Prenom</th>
-    <th>Actions</th>
-    </tr>
-    </tfoot>
-    </table>
-    </div>
-    </div>
+                                                    <hr>
 
-    </div>
-    </div>
-    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="adr_p_a" placeholder="Address">
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <input type="text" class="form-control" id="num_p_a" placeholder="Num">
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <select id="spe_c_p_a" class="form-control">
+                                                                <option selected>Choose Spec</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>Autre</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <input type="password" class="form-control" id="pass_p_a" placeholder="Password">
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <input type="password" class="form-control" id="pass_c_p_a" placeholder="Confirm">
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button"
+                                                        class="btn btn-secondary"
+                                                        data-dismiss="modal"
+                                                >Close</button>
+                                                <button type="button" class="btn btn-primary">Ajouter</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="my-5">
+                                <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody >
+                                    <tr>
+                                        <td>sblabla</td>
+                                        <td>blabla</td>
+                                        <td>blablabla</td>
+                                        <td>
+                                            <a href="#"
+                                               class="btn btn-warning"
+                                               data-toggle="modal"
+                                               data-target="#pat_modal_update">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-danger"
+                                               data-toggle="modal"
+                                               data-target="#pat_modal_delete">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <!-- doc modal update -->
+                                    <div class="modal fade"
+                                         id="pat_modal_update"
+                                         tabindex="-1"
+                                         role="dialog"
+                                         aria-labelledby="ModalLabel_2"
+                                         aria-hidden="true"
+                                    >
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="ModalLabel_2">Modal title</h5>
+                                                    <button type="button"
+                                                            class="close"
+                                                            data-dismiss="modal"
+                                                            aria-label="Close"
+                                                    >
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+
+                                                    <form action="">
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-12 mb-3">
+                                                                        <img class="rounded-circle"
+                                                                             src="assets/admin/ava_doc.png"
+                                                                             alt=""
+                                                                             width="150px"
+                                                                             height="150px"
+                                                                             style="border: 4px solid #5f5aaa"
+                                                                        >
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="custom-file">
+                                                                    <label for="customFile_update_1">Ajouter Photo</label>
+                                                                    <input type="file" class="custom-file-input" id="customFile_update_2">
+                                                                    <label class="custom-file-label" for="customFile_update_2">Choose file</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" class="form-control" id="nom_p" placeholder="Nom">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" class="form-control" id="prenom_p" placeholder="Prenom">
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <input type="text" class="form-control" id="adr_p" placeholder="Address">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="text" class="form-control" id="num_p" placeholder="Num">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <select id="spe_c_p" class="form-control">
+                                                                    <option selected>Choose Spec</option>
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>Autre</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <input type="password" class="form-control" id="pass_p" placeholder="Password">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input type="password" class="form-control" id="pass_c_p" placeholder="Confirm">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button"
+                                                            class="btn btn-secondary"
+                                                            data-dismiss="modal"
+                                                    >Close</button>
+                                                    <button type="button" class="btn btn-primary">Modifier</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- doc modal delete -->
+                                    <div class="modal fade"
+                                         id="pat_modal_delete"
+                                         tabindex="-1"
+                                         role="dialog"
+                                         aria-labelledby="ModalLabel_pat_detlete"
+                                         aria-hidden="true"
+                                    >
+                                        <div class="modal-dialog modal-md" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="ModalLabel_pat_delete">Modal title</h5>
+                                                    <button type="button"
+                                                            class="close"
+                                                            data-dismiss="modal"
+                                                            aria-label="Close"
+                                                    >
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div>
+                                                        <p>
+                                                            Voulez-vous le supprimer définitivement?
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button"
+                                                            class="btn btn-secondary"
+                                                            data-dismiss="modal"
+                                                    >Close</button>
+                                                    <button type="button" class="btn btn-primary">Suprimer</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- drugs crud -->
+        <div class="row" style="display: none" id="drug_crud">
+            <div class="col-12">
+                <div class="card shadow mb-4">
+
+                    <div class="card-header py-3" style="background-color: #37346b">
+                        <h6 class="m-0 font-weight-bold text-white">Drugs CRUD</h6>
+                    </div>
+
+                    <div class="card-body" style="background-color: #5f5aaa">
+                        <div class="my-5">
+                            <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody >
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- herbo crud -->
+        <div class="row" style="display: none" id="herbo_crud">
+            <div class="col-12">
+                <div class="card shadow mb-4">
+
+                    <div class="card-header py-3" style="background-color: #37346b">
+                        <h6 class="m-0 font-weight-bold text-white">Herbo CRUD</h6>
+                    </div>
+
+                    <div class="card-body" style="background-color: #5f5aaa">
+                        <div class="my-5">
+                            <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody >
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>sblabla</td>
+                                    <td>blabla</td>
+                                    <td>blablabla</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
     </main>
