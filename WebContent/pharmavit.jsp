@@ -1,4 +1,5 @@
-<%@page import="src.medicament"%>
+<%@ page pageEncoding="UTF-8" %>
+<%@page import="Modele.medicament"%>
 <%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html>
@@ -35,51 +36,7 @@
 
 <!-- Content -->
 <div class="">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #37346b">
-
-        <!-- toglle_nav -->
-        <span class="navbar-toggler-icon
-                         navbar-toggler
-                         bg-info"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarTogglerDemo03"
-              aria-controls="navbarTogglerDemo03"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-            </span>
-        <!-- toglle_nav_end -->
-
-        <!-- LOGO -->
-        <a class="navbar-brand text-white" href="#">
-            <img src="archProjMaster/assets/logo_health.svg" width="65" height="65" class="d-inline-block align-top" alt="">
-        </a>
-        <!-- LOGO_end -->
--
-        <!-- List -->
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#doctor">Consultation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center " href="/e_health/home.jsp#doctor" >Doctors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#drugs">Drugs</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#contact">Contacts<span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-        <!-- List_end -->
-
-    </nav>
+  <%@ include file="liste.jsp" %>
     <!-- navbar_end -->
 
     <!--page_header -->
@@ -94,7 +51,7 @@
                 <h2>PharmaVite</h2>
                 <h4>By</h4>
                 <h1 style="font-size:50px">DIAGNOVITE</h1>
-                <p>Le dictionnaire des médicaments</p>
+                <p>Le dictionnaire des mÃ©dicaments</p>
             </div>
         </div>
 

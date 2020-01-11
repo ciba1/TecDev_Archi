@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +34,20 @@
 	
 	<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-			<form class="login100-form validate-form" action="home" method="post">
+			<form class="login100-form validate-form" action="/e_health/VersLogin" method="post">
 				<span class="login100-form-title p-b-37">
 					Sign In
 				</span>
-
-				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+				<% /*
+				String reche = (String) request.getParameter("message");
+				if(reche!=null){
+					
+                   out.println("<div class=\"alert alert-primary\" role=\"alert\">");
+                   out.println(reche);
+                   out.println("</div>");
+				}*/
+  %>
+  		<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
 					<input class="input100" type="text" name="name" placeholder="username or email">
 					<span class="focus-input100"></span>
 				</div>

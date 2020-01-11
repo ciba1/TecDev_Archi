@@ -1,6 +1,7 @@
-<%@page import="src.maladiePossedeSymptome"%>
+<%@ page pageEncoding="UTF-8" %>
+<%@page import="Modele.maladiePossedeSymptome"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="src.maladie"%>
+<%@page import="Modele.maladie"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,61 +24,74 @@
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-	<script src="archProjMaster/js/autocomplete.multiselect.js"></script>
-
+	
+	
+	
+	<!--
+	<script src="archProjMaster/js/autocomplete.multiselect.js"></script> <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script> -->
 </head>
 <body style="background-color: #5f5aaa;">
 
 <!-- Content -->
 <div class="">
 
+<%@ include file="liste.jsp" %>
+    <script>
+$.get("http://localhost:8080/e_health/GetSearche.jsp", function(data, status){
+		
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #37346b">
+		$( function() {
+			var availableTags ;
+			
+			function split( val ) {
+				return val.split( /,\s*/ );
+			}
+			function extractLast( term ) {
+				return split( term ).pop();
+			}
 
-        <!-- toglle_nav -->
-        <span class="navbar-toggler-icon
-                         navbar-toggler
-                         bg-info"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarTogglerDemo03"
-              aria-controls="navbarTogglerDemo03"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-            </span>
-        <!-- toglle_nav_end -->
+			$( "#tags" )
+				
+				.on( "keydown", function( event ) {
+					if ( event.keyCode === $.ui.keyCode.TAB &&
+							$( this ).autocomplete( "instance" ).menu.active ) {
+						event.preventDefault();
+					}
+				})
+				.autocomplete({
+					minLength: 0,
+					source: function( request, response ) {
+						
+						response( $.ui.autocomplete.filter(
+								JSON.parse(data), extractLast( request.term ) ) );
+					},
+					focus: function() {
+						
+						return false;
+					},
+					select: function( event, ui ) {
+						var terms = split( this.value );
+						
+						terms.pop();
+						
+						terms.push( ui.item.value );
+						
+						terms.push( "" );
+						this.value = terms.join( ", " );
+						return false;
+					}
+				});
+		} );
+		
+		
+	  });
+	
+	  
+	
+	</script>
 
-        <!-- LOGO -->
-        <a class="navbar-brand text-white" href="#">
-             <img src="archProjMaster/assets/logo_health.svg" width="65" height="65" class="d-inline-block align-top" alt="">
-          </a>
-        <!-- LOGO_end -->
--
-        <!-- List -->
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                 <a class="nav-link text-white text-center" href="/e_health/home.jsp">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#doctor">Consultation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center " href="/e_health/home.jsp#doctor" >Doctors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#drugs">Drugs</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-white text-center" href="/e_health/home.jsp#contact">Contacts<span class="sr-only">(current)</span></a>
-                 </li>
-            </ul>
-        </div>
-        <!-- List_end -->
-
-    </nav>
-    <!-- navbar_end -->
+    </script>
 
     <!-- card_search -->
     <div class="card bg-dark text-white border border-0">
@@ -88,40 +102,27 @@
         <div class="card-img-overlay p-5">
             <h1 class="card-title"><strong>DiagnoVit</strong></h1>
             <br><br>
-            <p class="card-text">DiagnoVit vous aide a chercher n'importe quel maladie a partir des Symptomes entrée dans la barre recherche </p>
+            <p class="card-text">DiagnoVit vous aide a chercher n'importe quel maladie a partir des Symptomes entrÃ©e dans la barre recherche </p>
             <p class="card-text">tapez vos Syptomes et voir les resultat </p>
 
             <!-- Search -->
             <div class="sticky-top py-4 row justify-content-center">
                 <div class="col-lg-8">
+                	<form action="http://localhost:8080/e_health/resultatRechercheMaladie" method="get">
                     <div class="input-group mb-2">
-                       <input name="search" type="text" class="form-control form-control-lg" id="myAutocompleteMultiple" >
+                       <input name="search" type="text" class="form-control form-control-lg" id="tags">
                         <div  class="input-group-prepend">
                             <div class="input-group-text rounded-right m-0 border border-secondary" style="background-color: #5f5aaa">
                                  
-                    
-                                <i class="fas fa-search text-white"></i>
-                              
+                    			<button  class="btn-md"></button>
                             </div>
                         </div>
-                         
-                    </div>
-                    <p class="card-text">tapez just des mots....</p>
+                     </div>
+                    </form>
+                    
                 </div>
             </div>
-            <script type="text/javascript">
-	$(function(){
-		$.get("http://localhost:8080/e_health/GetSearche.jsp"
-				, function(data){
-					$('#myAutocompleteMultiple').autocomplete({
-						source: $.parseJSON(data),
-						multiselect: true
-					});
-		  });
-
-		
-	});
-</script>
+          
             <!-- Search_end -->
         </div>
     </div>
@@ -130,14 +131,18 @@
    
 
     <!-- card_result -->
-    <%	/*out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
+ 
+     <% String reche = (String) request.getParameter("search");
+ 	  if(reche!=null){
     
-   ArrayList<maladiePossedeSymptome> ms=(ArrayList<maladiePossedeSymptome>)request.getAttribute("maladiesymptome ");
+    out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
+    
+   ArrayList<maladiePossedeSymptome> ms=(ArrayList<maladiePossedeSymptome>)request.getAttribute("maladiesymptome");
    ArrayList<maladie> m=(ArrayList<maladie>)request.getAttribute("mal");//heda rehou null
    String nomMaladie ;
    int j;
-   if(!ms.isEmpty()){
-    for(maladiePossedeSymptome item: ms)
+   if( (ms.size()!=0) &&(m!=null)){
+	  for(maladiePossedeSymptome item: ms)
     { 
     	j=0;
     
@@ -166,7 +171,7 @@
    out.print("       </p>");
     out.print("     </div>"); 
     out.print("       <br>"); 
-   /* out.print("     <div class=\"row\">"); 
+    out.print("     <div class=\"row\">"); 
     
  out.print("<button class=\"btn btn-info\">Learn More</button>"); 
     out.print("       </div>");
@@ -176,8 +181,8 @@
     out.print("</div>"); 
     out.print("</div>"); 
     }}
-   else{   out.print(" <br> <center> <h1 class=\"card-title text-white\">   Recherche Introuvable ! </center> <br>");}
-    */  %>
+   else{out.print(" <br> <center> <h1 class=\"card-title text-white\">   Recherche Introuvable ! </center> <br>");}
+    } %>
       
   
     <!-- Contact_information -->

@@ -11,13 +11,13 @@
      Class.forName("com.mysql.jdbc.Driver");
      Connection con =DriverManager.getConnection("jdbc:mysql://localhost/mydb","root","");
      Statement st=con.createStatement();
-     ResultSet rs = st.executeQuery("select nomSymptome from symptome ");
+     ResultSet rs = st.executeQuery("select nom,prenom from medecin ");
 
        List li = new ArrayList();
 
        while(rs.next())
        {
-           li.add(rs.getString(1));
+           li.add(rs.getString(1)+" "+rs.getString(2));
        }
 
        String[] str = new String[li.size()];

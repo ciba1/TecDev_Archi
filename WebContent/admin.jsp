@@ -1,13 +1,14 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>pro_arch_b</title>
-<<<<<<< HEAD:WebContent/admin.html
+
     <link rel="stylesheet" type="text/css" href="archProjMaster/admin.css">
 =======
     <link rel="stylesheet" href="archProjMaster/style/admin.css">
->>>>>>> d43b393f72a1c014a5bbcdf9a565c3b83e8d3d29:WebContent/admin.jsp
+
 
     <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
 
@@ -21,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <!-- DAtatable -->
-    <link rel="stylesheet" type="text/css" href="style/datatable.css">
+    <link rel="stylesheet" type="text/css" href="archProjMaster/style/datatable.css">
 
     <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
@@ -42,7 +43,7 @@
 <div class="sidebar-content">
 <div class="sidebar-brand">
 <a href="#" class="row justify-content-center">
-<img src="assets/tecdevlogo.svg" alt="" height="100" width="100">
+<img src="archProjMaster/assets/tecdevlogo.svg" alt="" height="100" width="100">
 </a>
 <div id="close-sidebar">
 <i class="fas fa-times"></i>
@@ -51,14 +52,14 @@
 <div class="sidebar-header">
 <div class="user-pic">
 <img class="img-responsive img-rounded"
-src="assets/harouz.jpg"
+src="archProjMaster/assets/harouz.jpg"
 alt="User picture"
 style="border-radius: 50%; height: 55px; width: 55px"
 >
 </div>
 <div class="user-info">
-<span class="user-name">ADMIN
-<strong>Admin</strong>
+<span class="user-name">
+
 </span>
 <span class="user-role">Administrator</span>
 <span class="user-status">
@@ -147,7 +148,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
 <i class="fa fa-cog"></i>
 <span class="badge-sonar"></span>
 </a>
-<a href="#">
+<a href="/e_health/index?page=logout">
 <i class="fa fa-power-off"></i>
 </a>
 </div>
@@ -682,7 +683,7 @@ $(".page-wrapper").addClass("toggled");
 });
 
 $(document).ready(function(){
-/* dash ùain toggles */
+/* dash Ã¹ain toggles */
 $("#dashboard_clk").click(function(){
 $("#dash_main").css("display", "block");
 $("#doc_crud").css("display", "none");

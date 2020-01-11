@@ -1,0 +1,16 @@
+1/ recherche des maladies:
+select *from Maladie join Possède on Maladie.nom_maladie=Possède.nom_maladie 
+where nom_symptome='?' 
+//correction
+select * from maladie_possede_symptome where nomSymptome='Maux de gorge'
+2/ recherche médicament
+select * from Médicament where Médicament.nom_médicament='?'
+
+3/recherche d'un médecin 
+select *from Médecin where Médcin.nom_médecin='?'
+
+4/ affichage ta3 dwawat li yjou f herbovit
+select * from Médicament where Médicament.type='herbo'
+
+5/ affichage ta3 dwawat li yjou f pharmavit
+select * from Médicament where Médicament.type='pharma'

@@ -1,0 +1,12 @@
+create table TD_Cities (City nvarchar(15) primary key ,Country nvarchar(15));
+create table TD_Customers (CustumersID nchar(5) primary key , CustumerName nvarchar(30),City nvarchar(15) , foreign key (City) references TD_Cities(City) );
+create table TD_Time (OrderMonth char(7)  ,OrderYear char(4) , primary key(OrderMonth,OrderYear));
+create table TD_Employees (EmployeeID int primary key , LastName nvarchar(20),FirstName nvarchar(10),City nvarchar(15) , foreign key (city) references TD_Cities(City) );
+create table TD_Suppliers (SupplierID int,SupplierName nvarchar(40), City nvarchar(15) , foreign key (City) references TD_Cities(City)  );
+create table TD_PriceLevel ( PriceLevel char(2) primary key );
+create table TD_StockLevel ( StockLevel char(2) primary key );
+create table TD_Categories (CategoryID int primary key ,CategoryName nvarchar(15));
+create table TD_OrderLevel ( OrderLevel char(6) primary key );
+create table TD_SalesLevel ( SalesLevel char(6) primary key );
+create table TD_Products (ProductID int  primary key , ProductName nvarchar(40) ,City nvarchar(15) , foreign key (City) references TD_Cities(City) );
+create table TD_Discount ( Discount  real primary key );
