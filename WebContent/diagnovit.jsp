@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <%@ page pageEncoding="UTF-8" %>
 <%@page import="Modele.maladiePossedeSymptome"%>
+=======
+<% @page import="src.maladiePossedeSymptome"%>
+>>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modele.maladie"%>
 <!DOCTYPE html>
@@ -131,11 +135,15 @@ $.get("http://localhost:8080/e_health/GetSearche.jsp", function(data, status){
    
 
     <!-- card_result -->
+<<<<<<< HEAD
  
      <% String reche = (String) request.getParameter("search");
  	  if(reche!=null){
     
     out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
+=======
+    <%/*out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
+>>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
     
    ArrayList<maladiePossedeSymptome> ms=(ArrayList<maladiePossedeSymptome>)request.getAttribute("maladiesymptome");
    ArrayList<maladie> m=(ArrayList<maladie>)request.getAttribute("mal");//heda rehou null

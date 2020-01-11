@@ -32,6 +32,7 @@
 
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<<<<<<< HEAD
     
     <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"/>
 	<link rel="stylesheet" type="text/css" href="archProjMaster/css/style.css"/>
@@ -90,6 +91,9 @@
 	  });
 	
   </script>
+=======
+
+>>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
 </head>
 <body style="background-color: #5f5aaa">
 <!-- Content -->
@@ -202,6 +206,7 @@ String reche = (String) request.getAttribute("search");
     
 out.print("<!-- med_info -->");
 
+<<<<<<< HEAD
 out.print("<!-- modal_medcin -->");
 out.print("<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">");
  out.print("<div class=\"modal-dialog modal-lg\" role=\"document\"> <div class=\"modal-content\"> ");
@@ -260,6 +265,62 @@ out.print("<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"
      out.print("</div> </div> </div> </div>") ;
      
      out.print("<!-- modal_medcin_end -->") ;
+=======
+                            <div class="col-8">
+                                <form action="" class="my-3">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input id="datepicker" placeholder="make appointment"/>
+                                            <script>
+                                                $('#datepicker').datepicker({
+                                                    uiLibrary: 'bootstrap4'
+                                                });
+                                            </script>
+                                        </div>
+                                        <div class="col-6">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Time</option>
+                                                <option>10h00</option>
+                                                <option>11h00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <h4>Address</h4>
+                                        <p>Cité kda mena menhik B1 num 22, Birkhadem, Alger....</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mapouter">
+                                            <div class="gmap_canvas">
+                                                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=usdb&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal_medcin_end -->
+
+    </div>
+    <!-- card_result_end -->
+    <!-- liste_medecins_end -->
+>>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
 
     out.print("</div>") ;
     out.print("   <!-- card_result_end -->") ;
