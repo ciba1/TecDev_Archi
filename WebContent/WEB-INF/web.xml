@@ -8,7 +8,7 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>home</servlet-name>
-    <servlet-class>pack.home</servlet-class>
+    <servlet-class>Controller.home</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>home</servlet-name>
@@ -16,10 +16,18 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>index</servlet-name>
-    <servlet-class>pack.index</servlet-class>
+    <servlet-class>Controller.index</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>index</servlet-name>
     <url-pattern>/index</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Deconnexion</servlet-name>
+    <servlet-class>Controller.Deconnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Deconnexion</servlet-name>
+    <url-pattern>/Deconnexion</url-pattern>
   </servlet-mapping>
 </web-app>

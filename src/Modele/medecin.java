@@ -1,31 +1,22 @@
-package src;
+package Modele;
 
 public class medecin {
 	  private int idmedecin;
-	  private String login;
-	  private String motPasse;
 	  private String nom;
 	  private String prenom;
 	  private String adresse;
 	  private String specialité;
-	  int age;
 	  private String telephone;
-	  private String sexe;
-	
-	  public medecin(int idmedecin, String login, String motPasse, String nom, String prenom, String adresse,
-			String specialité, int age, String telephone, String sexe) {
+	 
+	  public medecin(int idmedecin,String nom, String prenom, String adresse,String specialité, String telephone) {
 		super();
 		this.idmedecin = idmedecin;
-		this.login = login;
-		this.motPasse = motPasse;
-		this.nom = nom;
+	   this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = adresse;
 		this.specialité = specialité;
-		this.age = age;
 		this.telephone = telephone;
-		this.sexe = sexe;
-	}
+		}
 	  
 	  public medecin() {
 		  
@@ -39,21 +30,6 @@ public class medecin {
 		this.idmedecin = idmedecin;
 	}
 
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getMotPasse() {
-		return motPasse;
-	}
-
-	public void setMotPasse(String motPasse) {
-		this.motPasse = motPasse;
-	}
 
 	public String getNom() {
 		return nom;
@@ -87,13 +63,7 @@ public class medecin {
 		this.specialité = specialité;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
+	
 
 	public String getTelephone() {
 		return telephone;
@@ -103,13 +73,7 @@ public class medecin {
 		this.telephone = telephone;
 	}
 
-	public String getSexe() {
-		return sexe;
-	}
-
-	public void setSexe(String sexe) {
-		this.sexe = sexe;
-	}
+	
 	  
 	  
 

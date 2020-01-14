@@ -45,10 +45,10 @@ $.widget("ui.autocomplete", $.ui.autocomplete, {
             o.select = function(e, ui) {
                 $("<div></div>")
                     .addClass("ui-autocomplete-multiselect-item")
-                    .text(ui.item.label)
                     .append(
-                        $("<span></span>")
-                            .addClass("ui-icon ui-icon-close")
+                        $("<span id='haja'></span>")
+                        .text(ui.item.label)
+                            .addClass("ui-icon-close")
                             .click(function(){
                                 var item = $(this).parent();
                                 delete self.selectedItems[item.text()];

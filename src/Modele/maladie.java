@@ -1,4 +1,4 @@
-package src;
+package Modele;
 
 public class maladie {
 	private String nom;

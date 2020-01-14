@@ -1,4 +1,4 @@
-package src;
+package Modele;
 
 public class patient {
 	  private int idpatient;
@@ -11,7 +11,8 @@ public class patient {
 	  private String dateNaissance;
 	  private String login;
 	  private String motPasse;
-	public patient(int idpatient, String nom, String prenom, String adresse, int age, String telephone, String sexe,
+	
+	  public patient(int idpatient, String nom, String prenom, String adresse, int age, String telephone, String sexe,
 			String dateNaissance, String login, String motPasse) {
 		super();
 		this.idpatient = idpatient;

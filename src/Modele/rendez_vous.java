@@ -1,4 +1,4 @@
-package src;
+package Modele;
 
 import java.sql.Date;
 import java.sql.Time;

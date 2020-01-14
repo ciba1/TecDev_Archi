@@ -1,4 +1,4 @@
-package src;
+package Modele;
 
 public class ordonance {
 	int numero;
