@@ -45,7 +45,7 @@ x            </span>
             <!-- list_menu_end -->
 
             <!-- Sign_IN -->
-           <%  String user =(String)session.getAttribute("user");
+           <%  String user =(String)session.getAttribute("name");
            
             int idUser  = 1;
             if(false){	

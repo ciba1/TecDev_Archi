@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Modele.medecin;
-import Modele.medicament;
+
 
 /**
  * Servlet implementation class versListeMedecins
@@ -45,32 +45,28 @@ public class versListeMedecins extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 ArrayList<medecin> med=new ArrayList<>();
-		   PrintWriter out = response.getWriter();
+		
 	    String uname = request.getParameter("Rmed");
 	    String[] s= uname.split(" ");
-	    System.out.println("select * from medecin where nom='"+s[0]+"' or prenom='"+s[1]+"' ");
 	    try {
-	    	
+	    	HttpSession session = request.getSession();
 	     Class.forName("com.mysql.jdbc.Driver");
 	      java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost/mydb","root","");
 	      Statement stmt = con.createStatement();
 	      ResultSet rs = stmt.executeQuery("select * from medecin where nom='"+s[0]+"' or prenom='"+s[1]+"' ");
 	      
 	      while(rs.next()) {
-	    	  System.out.println("ok");
-	    	  med.add(new medecin(rs.getInt("idmedecin"),rs.getString("nom"),rs.getString("prenom"),rs.getString("adresse"),rs.getString("specialite"),rs.getString("telephone")));
-	    	}
-	     // HttpSession session = request.getSession();
-    
-	     
-         request.setAttribute("search","ok");
+	    	    med.add(new medecin(rs.getInt("idmedecin"),rs.getString("nom"),rs.getString("prenom"),rs.getString("adresse"),rs.getString("specialite"),rs.getString("telephone")));
+	    	    }
+	      session.setAttribute("medJSP",med.get(0).getIdmedecin());
+	      session.setAttribute("medJSPnom",med.get(0).getNom()+" "+med.get(0).getPrenom());
+	      request.setAttribute("search","ok");
          request.setAttribute("med",med);
-         System.out.println("ok1");
          this.getServletContext().getRequestDispatcher("/medecins.jsp").forward(request, response);
-        //response.sendRedirect("/e_health/medecins.jsp"); //hadi wach ma3tnha ?pafewelooou je c pas 3lech dertha
+      
         
 	      }
-	      catch(Exception e) {System.out.print("erreur : "+e.getMessage());}
+	      catch(Exception e) { System.out.print("erreur : "+e.getMessage());}
 	}
 
 }

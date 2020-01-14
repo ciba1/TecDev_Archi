@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 <%@ page pageEncoding="UTF-8" %>
 <%@page import="Modele.maladiePossedeSymptome"%>
-=======
-<% @page import="src.maladiePossedeSymptome"%>
->>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
+
+<%@page import="Modele.maladiePossedeSymptome"%>
+
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modele.maladie"%>
 <!DOCTYPE html>
@@ -95,7 +95,12 @@ $.get("http://localhost:8080/e_health/GetSearche.jsp", function(data, status){
 	
 	</script>
 
-    </script>
+    <script>
+			function getMedecin(){
+				var search = document.getElementById('tags').value
+				document.getElementById("form_id").submit();
+				}
+			</script>
 
     <!-- card_search -->
     <div class="card bg-dark text-white border border-0">
@@ -112,13 +117,12 @@ $.get("http://localhost:8080/e_health/GetSearche.jsp", function(data, status){
             <!-- Search -->
             <div class="sticky-top py-4 row justify-content-center">
                 <div class="col-lg-8">
-                	<form action="http://localhost:8080/e_health/resultatRechercheMaladie" method="get">
+                	<form action="http://localhost:8080/e_health/resultatRechercheMaladie" id="form_id"  method="get">
                     <div class="input-group mb-2">
-                       <input name="search" type="text" class="form-control form-control-lg" id="tags">
+                       <input id="tags" name="search" type="text" class="form-control form-control-lg" >
                         <div  class="input-group-prepend">
-                            <div class="input-group-text rounded-right m-0 border border-secondary" style="background-color: #5f5aaa">
-                                 
-                    			<button  class="btn-md"></button>
+                             <div class="input-group-text rounded-right m-0 border border-secondary" style="background-color: #5f5aaa">
+                                <i onclick="getMedecin()" class="fas fa-search text-white"></i>
                             </div>
                         </div>
                      </div>
@@ -135,16 +139,12 @@ $.get("http://localhost:8080/e_health/GetSearche.jsp", function(data, status){
    
 
     <!-- card_result -->
-<<<<<<< HEAD
+
  
      <% String reche = (String) request.getParameter("search");
  	  if(reche!=null){
     
     out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
-=======
-    <%/*out.print(" <div class=\"row justify-content-center mt-3\"> <div class=\"col-auto\"> <h1 class=\"card-title text-white\"><strong>Results</strong></h1> </div> <br></div>");
->>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77
-    
    ArrayList<maladiePossedeSymptome> ms=(ArrayList<maladiePossedeSymptome>)request.getAttribute("maladiesymptome");
    ArrayList<maladie> m=(ArrayList<maladie>)request.getAttribute("mal");//heda rehou null
    String nomMaladie ;

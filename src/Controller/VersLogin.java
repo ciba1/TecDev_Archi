@@ -1,25 +1,22 @@
 package Controller;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-<<<<<<< HEAD:src/Controller/VersLogin.java
+
 import Modele.ConnexionForm;
 import Modele.Utilisateur;
 
-=======
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
->>>>>>> 6213a8fbe389c64e8285a65063ec0465c7e65a77:src/pack/home.java
 
-/**
- * Servlet implementation class VersLogin
- */
 @WebServlet("/VersLogin")
 public class VersLogin extends HttpServlet {
 	    public VersLogin() {
@@ -50,30 +47,21 @@ public class VersLogin extends HttpServlet {
 		      
 		      if(rs.next()) {
 		    	  HttpSession session = request.getSession();
-		         request.setAttribute("name", rs.getString("nom")+" "+rs.getString("prenom"));
-		         
-		         session.setAttribute("user",uname);
+		    	  session.setAttribute("name", rs.getString("nom")+" "+rs.getString("prenom"));
+		         session.setAttribute("user",rs.getString("idpatient"));
 		        response.sendRedirect("/e_health/index?page=home");
 		        
-		      }else {
-		    	  request.setAttribute("name",null);
-			         request.setAttribute("username",null);
-			         request.setAttribute("message","Verifier vos informations !");
-			          }
-		      System.out.print("requete 2 ");
+		      }
 ResultSet rs2 = stmt.executeQuery("select * from medecin where login='"+uname+"' and motPasse='"+upass+"'");
 		      
 		      if(rs2.next()) {
-		    	  HttpSession session = request.getSession();
+		    	  HttpSession session =request.getSession();
 		    	 session.setAttribute("name", rs2.getString("nom")+" "+rs2.getString("prenom"));
-		         session.setAttribute("user",uname);
+		         session.setAttribute("user",rs2.getString("idmedecin"));
 		        response.sendRedirect("/e_health/admin.jsp?page=admin");
 		        
-		      }else {
-		    	  request.setAttribute("name",null);
-			         request.setAttribute("username",null);
-			         request.setAttribute("message","Verifier vos informations !");
-			          }  
+		      }  
+		   
 		    }
 		      catch(Exception e) {System.out.print("erreur : "+e.getMessage());}
 		

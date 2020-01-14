@@ -51,16 +51,14 @@ public class resultatRechercheMaladie extends HttpServlet {
 	      Statement stmt = con.createStatement();
           ResultSet rs = stmt.executeQuery("select * from maladie_possede_symptome d join maladie m on(d.nomMaladie=m.nom) WHERE "+recherche);
 	
- 		System.out.println("select * from maladie_possede_symptome d join maladie m on(d.nomMaladie=m.nom) WHERE "+recherche);
-	 
- 		while(rs.next()) { System.out.println(" resultat non vide dans la boucle while "+rs.getString("nomMaladie"));
-	    	 med.add(new maladiePossedeSymptome (rs.getString("nomMaladie"),rs.getString("nomSymptome")));
+ 		while(rs.next()) {
+ 			med.add(new maladiePossedeSymptome (rs.getString("nomMaladie"),rs.getString("nomSymptome")));
 	    	 maladie.add(new maladie(rs.getString("nomMaladie"),rs.getString("discription")));
 	    	  }}
             
 	     catch(Exception e) {System.out.print("erreur : "+e.getMessage()); }
 		request.setAttribute("maladiesymptome", med);
-		request.setAttribute("mal",maladie );// rani ghir ne9ol win rahi :p  
+		request.setAttribute("mal",maladie );
 		this.getServletContext().getRequestDispatcher("/diagnovit.jsp").forward(request, response);
 	}
 
