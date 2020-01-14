@@ -121,7 +121,7 @@
         //button_Appointment
         $("#Appointment").click(function(){
             $("#successful").css("display", "block");
-            $("#modal_tbib").css("display", "block");
+            $("#failed").css("display", "block");
         });
     } );
 </script>
@@ -397,7 +397,7 @@
 					                        "<p class='text-success'>Successful !</p>"+
 					                    "</div>"+
 					                "</div>");
-						out.print("<div class='row' id='successful' style='display: none'>"+
+						out.print("<div class='row' id='failed' style='display: none'>"+
 			                            "<div class='col-12'>"+
 					                        "<p class='text-danger'>Failed !</p>"+
 					                    "</div>"+
