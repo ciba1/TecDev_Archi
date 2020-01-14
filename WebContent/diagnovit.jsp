@@ -1,4 +1,4 @@
-<% @page import="src.maladiePossedeSymptome"%>
+<%@page import="src.maladiePossedeSymptome"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="src.maladie"%>
 <!DOCTYPE html>
