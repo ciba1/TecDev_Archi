@@ -76,11 +76,8 @@
 		         out.print("</td><td>");
                  out.print(item.getPrix()); 
                  out.print("</td></tr>");
-<<<<<<< HEAD
             //testi psk maraho ybanli �crakk
-=======
-            //testi psk maraho ybanli écrakk
->>>>>>> 82de145af2992f8b1ffc73fe9ad77b3443c69a4f
+		    //testi psk maraho ybanli écrakk
               }
                      %>    
 		  

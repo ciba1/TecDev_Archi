@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 <%@page import="src.maladiePossedeSymptome"%>
-=======
 
 <%@ page pageEncoding="UTF-8" %>
 <%@page import="Modele.maladiePossedeSymptome"%>
 
-<%@page import="Modele.maladiePossedeSymptome"%>
 
->>>>>>> 82de145af2992f8b1ffc73fe9ad77b3443c69a4f
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modele.maladie"%>
 <!DOCTYPE html>
