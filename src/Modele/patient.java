@@ -7,12 +7,11 @@ public class patient {
 	  private String adresse;
 	  int age;
 	  private String telephone;
-	  private String sexe;
 	  private String dateNaissance;
 	  private String login;
 	  private String motPasse;
-	
-	  public patient(int idpatient, String nom, String prenom, String adresse, int age, String telephone, String sexe,
+	////////////////////////////////////////
+	  public patient(int idpatient, String nom, String prenom, String adresse, int age, String telephone,
 			String dateNaissance, String login, String motPasse) {
 		super();
 		this.idpatient = idpatient;
@@ -21,7 +20,7 @@ public class patient {
 		this.adresse = adresse;
 		this.age = age;
 		this.telephone = telephone;
-		this.sexe = sexe;
+	
 		this.dateNaissance = dateNaissance;
 		this.login = login;
 		this.motPasse = motPasse;
@@ -79,13 +78,6 @@ public class patient {
 		this.telephone = telephone;
 	}
 
-	public String getSexe() {
-		return sexe;
-	}
-
-	public void setSexe(String sexe) {
-		this.sexe = sexe;
-	}
 
 	public String getDateNaissance() {
 		return dateNaissance;

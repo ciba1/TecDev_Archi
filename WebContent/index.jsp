@@ -13,6 +13,8 @@
 	<% if(Page.equals("logout")){%>
 	<%@include file="logout.jsp" %>
 	<%} %>
-	<% if(Page.equals("admin")){%>
+   <% if(Page.equals("admin")){%>
 	<%@include file="admin.jsp" %>
 	<%} %>
+
+	

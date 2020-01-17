@@ -7,8 +7,39 @@ public class medecin {
 	  private String adresse;
 	  private String specialité;
 	  private String telephone;
+	  private String login;
+	  private String motPasse;
 	 
-	  public medecin(int idmedecin,String nom, String prenom, String adresse,String specialité, String telephone) {
+	  public String getLogin() {
+		return login;
+	}
+
+	public medecin(int idmedecin, String nom, String prenom, String adresse, String specialité, String telephone,
+			String login, String motPasse) {
+		super();
+		this.idmedecin = idmedecin;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.specialité = specialité;
+		this.telephone = telephone;
+		this.login = login;
+		this.motPasse = motPasse;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getMotPasse() {
+		return motPasse;
+	}
+
+	public void setMotPasse(String motPasse) {
+		this.motPasse = motPasse;
+	}
+
+	public medecin(int idmedecin,String nom, String prenom, String adresse,String specialité, String telephone) {
 		super();
 		this.idmedecin = idmedecin;
 	   this.nom = nom;

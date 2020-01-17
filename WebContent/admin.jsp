@@ -1,13 +1,16 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ page import=" Modele.patient,Modele.medicament,Modele.medecin,java.util.ArrayList" %>
+<%if (session.getAttribute("user")==null){
+	response.sendRedirect("index?page=login");
+	}%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>pro_arch_b</title>
 
-    <link rel="stylesheet" type="text/css" href="archProjMaster/admin.css">
-=======
-    <link rel="stylesheet" href="archProjMaster/style/admin.css">
+    <link rel="stylesheet" type="text/css" href="archProjMaster/style/admin.css">
+   <link rel="stylesheet" href="archProjMaster/style/admin.css">
 
 
     <link rel="stylesheet" href="archProjMaster/css/bootstrap.min.css">
@@ -61,7 +64,10 @@ style="border-radius: 50%; height: 55px; width: 55px"
 <span class="user-name">
 
 </span>
-<span class="user-role">Administrator</span>
+<span class="user-role"><%
+String user =(String)session.getAttribute("name");
+out.print(user);
+%></span>
 <span class="user-status">
 <i class="fa fa-circle"></i>
 <span>Online</span>
@@ -129,7 +135,9 @@ style="border-radius: 50%; height: 55px; width: 55px"
 <i class="fas fa-user-injured"></i>
 <span>Patients</span>
 </a>
+
 </li>
+
 </ul>
 </div>
 <!-- sidebar-menu  -->
@@ -287,7 +295,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                 <div class="col-12" style="position: relative">
                     <div class="row doctors_main"></div>
                     <div class="row herbovite_text m-5 justify-content-center">
-                        <img src="assets/tecdevlogo.svg"
+                        <img src="archProjMaster/assets/tecdevlogo.svg"
                              alt=""
                              style="margin-top: 0px; max-height: 100%"
                         >
@@ -337,7 +345,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                             </div>
                                             <div class="modal-body">
 
-                                                <form action="">
+                                                <form id="ajoutM" action="/e_health/AddAll" method="post">
 
                                                     <div class="row">
 
@@ -345,7 +353,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                             <div class="row">
                                                                 <div class="col-12 mb-3">
                                                                     <img class="rounded-circle"
-                                                                         src="assets/admin/ava_doc.png"
+                                                                         src="archProjMaster/assets/admin/ava_doc.png"
                                                                          alt=""
                                                                          width="150px"
                                                                          height="150px"
@@ -354,6 +362,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                     
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
@@ -365,56 +374,94 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="nom_d" placeholder="Nom">
-                                                        </div>
+                                                            <input name="nom_d" type="text" class="form-control" id="nom_d" placeholder="Nom">
+                                                              </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="prenom_d" placeholder="Prenom">
+                                                            <input name="prenom_d" type="text" class="form-control" id="prenom_d" placeholder="Prenom">
                                                         </div>
                                                     </div>
 
                                                     <hr>
+                                                    
+                                                   <div class="row">
+                                                       <div class="col-md-4">
+                                                            <input name="age_d" class="form-control" type="number" value="30" id="example-number-input">
+                                                        </div>
+                                                    <div class="col-md-4">
+                                                     <select name="sexe_d" id="sexe_d" class="form-control">
+                                                                 <option selected>Choose .. </option>
+                                                                 <option>feminin</option>
+                                                                 <option>masculin</option>
+                                                    </select>
+                                                   </div>
+                                                    </div>
+                                                    <hr>
 
                                                     <div class="row">
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="adr_d" placeholder="Address">
+                                                            <input name="adr_d" type="text" class="form-control" id="adr_d" placeholder="Address">
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="num_d" placeholder="Num">
+                                                            <input name="num_d" type="text" class="form-control" id="num_d" placeholder="Numero telephone ..">
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <select id="spe_c_d" class="form-control">
-                                                                <option selected>Choose Spec</option>
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>Autre</option>
+                                                            <select name="spe_c_d" id="spe_c_d" class="form-control">
+                                                                <option selected>Choose Specialité</option>
+                                                                 <option>Anatomie pathologique </option>
+                                                                 <option>Anesthésie-réanimation</option>
+                                                                 <option>Biochimique</option>
+                                                                 <option>Cardiologue</option>
+                                                                 <option>Chirurgie générale</option>
+                                                                 <option>Dermatologue</option>
+                                                                 <option>Gastro-entérologue</option>
+                                                                 <option>Gynéco-Obstétrique</option>
+                                                                 <option>Hématologue</option>
+                                                                 <option>Médecine interne</option>
+                                                                 <option>Neurochirurgue</option>
+                                                                 <option>Neurologue</option>
+                                                                 <option>O.R.L.</option>
+                                                                 <option>Ophtalmologue</option>
+                                                                 <option>Pédiatre</option>
+                                                                 <option>Physiologue</option>
+                                                                 <option>Pneumo-phtisiologue</option>
+                                                                 <option>Psychiatrue</option>
+                                                                 <option>Rhumatologue</option>
+                                                                 <option>Autre</option>
                                                             </select>
                                                         </div>
                                                     </div>
 
                                                     <hr>
-
                                                     <div class="row">
                                                         <div class="col-md-4">
-                                                            <input type="password" class="form-control" id="pass_d" placeholder="Password">
+                                                            <input name="log_d" type="text" class="form-control" id="log_d" placeholder="your login .. ">
+                                                        </div>
+                                                     <div class="col-md-4">
+                                                            <input name="pass_d" type="password" class="form-control" id="pass_d" placeholder="Password">
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="password" class="form-control" id="pass_c_d" placeholder="Confirm">
+                                                            <input name="pass_d1" type="password" class="form-control" id="pass_c_d" placeholder="Confirm">
                                                         </div>
                                                     </div>
                                                 </form>
 
                                             </div>
+<script>
 
+function myFunction() {
+  document.getElementById("ajoutM").submit();
+}
+</script>
                                             <div class="modal-footer">
                                                 <button type="button"
                                                         class="btn btn-secondary"
                                                         data-dismiss="modal"
                                                 >Close</button>
-                                                <button type="button" class="btn btn-primary">Ajouter</button>
+                                      <button  name="submit" form="ajoutM" type="submit" value="ajouterM" class="btn btn-primary">Ajouter</button>
                                             </div>
                                         </div>
                                     </div>
@@ -426,31 +473,37 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                 <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
                                     <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Nom</th>
+                                         <th>Nom</th>
                                         <th>Prenom</th>
-                                        <th>Actions</th>
+                                        <th>Adresse</th>
+                                        <th>Specialité</th>
+                                        <th>Telephone</th>
+                                        <th>mot de passe </th>
+                                         <th>Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody >
-                                    <tr>
-                                        <td>sblabla</td>
-                                        <td>blabla</td>
-                                        <td>blablabla</td>
-                                        <td>
-                                            <a href="#"
-                                               class="btn btn-warning"
-                                               data-toggle="modal"
-                                               data-target="#doc_modal_update">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger"
-                                               data-toggle="modal"
-                                               data-target="#doc_modal_delete">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                   <% String ok=(String)request.getAttribute("mcrud");
+                                if(ok!=null){
+                                ArrayList<medecin> med = (ArrayList<medecin>) request.getAttribute("medecin");
+                                for(medecin item: med){
+                                	out.print("<tr>");
+                                      out.print("<td>"); out.print(item.getNom()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getPrenom());  out.print("</td>");
+                                      out.print("<td>"); out.print(item.getAdresse()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getSpecialité()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getTelephone()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getMotPasse()); out.print("</td>");
+                                       out.print("<td>");
+                                            out.print("<a href='#' class='btn btn-warning' data-toggle='modal' data-target='#pat_modal_update'>");
+                                                out.print("<i class='fas fa-edit'>"); out.print("</i>");
+                                            out.print("</a>");
+                                            out.print("<a href='#' class='btn btn-danger' data-toggle='modal' data-target='#pat_modal_delete'>");
+                                                out.print("<i class='fas fa-trash-alt'>"); out.print("</i>");
+                                            out.print("</a>");
+                                        out.print("</td>");
+                                    out.print("</tr>");
+                                }} %> 
                                     <!-- doc modal update -->
                                     <div class="modal fade"
                                          id="doc_modal_update"
@@ -481,7 +534,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                                 <div class="row">
                                                                     <div class="col-12 mb-3">
                                                                         <img class="rounded-circle"
-                                                                             src="assets/admin/ava_doc.png"
+                                                                             src="archProjMaster/assets/admin/ava_doc.png"
                                                                              alt=""
                                                                              width="150px"
                                                                              height="150px"
@@ -501,11 +554,11 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="nom_u" placeholder="Nom">
+                                                                <input name="nom_u" type="text" class="form-control" id="nom_u" placeholder="Nom">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="prenom_u" placeholder="Prenom">
+                                                                <input name="prenom_u" type="text" class="form-control" id="prenom_u" placeholder="Prenom">
                                                             </div>
                                                         </div>
 
@@ -513,19 +566,36 @@ style="border-radius: 50%; height: 55px; width: 55px"
 
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="adr_u" placeholder="Address">
+                                                                <input name="adr_u" type="text" class="form-control" id="adr_u" placeholder="Address">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="num_u" placeholder="Num">
+                                                                <input name="num_u" type="text" class="form-control" id="num_u" placeholder="Num">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <select id="spe_c_u" class="form-control">
-                                                                    <option selected>Choose Spec</option>
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>Autre</option>
+                                                                <select name="spe_c_u" id="spe_c_u" class="form-control">
+                                                                    <option selected>Choose Specialité</option>
+                                                                    <option>Anatomie pathologique </option>
+                                                                    <option>Anesthésie-réanimation</option>
+                                                                    <option>Biochimique</option>
+                                                                    <option>Cardiologue</option>
+                                                                    <option>Chirurgie générale</option>
+                                                                    <option>Dermatologue</option>
+                                                                    <option>Gastro-entérologue</option>
+                                                                    <option>Gynéco-Obstétrique</option>
+                                                                    <option>Hématologue</option>
+                                                                    <option>Médecine interne</option>
+                                                                    <option>Neurochirurgue</option>
+                                                                    <option>Neurologue</option>
+                                                                    <option>O.R.L.</option>
+                                                                     <option>Ophtalmologue</option>
+                                                                     <option>Pédiatre</option>
+                                                                     <option>Physiologue</option>
+                                                                     <option>Pneumo-phtisiologue</option>
+                                                                     <option>Psychiatrue</option>
+                                                                     <option>Rhumatologue</option>
+                                                                   <option>Autre</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -534,11 +604,11 @@ style="border-radius: 50%; height: 55px; width: 55px"
 
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <input type="password" class="form-control" id="pass_u" placeholder="Password">
+                                                                <input name="pass_u" type="password" class="form-control" id="pass_u" placeholder="Password">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="password" class="form-control" id="pass_c_u" placeholder="Confirm">
+                                                                <input name="pass_u1" type="password" class="form-control" id="pass_c_u" placeholder="Confirm">
                                                             </div>
                                                         </div>
                                                     </form>
@@ -597,10 +667,13 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nom</th>
                                         <th>Prenom</th>
-                                        <th>Actions</th>
+                                        <th>Adresse</th>
+                                        <th>Specialité</th>
+                                        <th>Telephone</th>
+                                        <th>mot de passe </th>
+                                         <th>Actions</th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -619,7 +692,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                 <div class="col-12" style="position: relative">
                     <div class="row patient_main"></div>
                     <div class="row herbovite_text m-5 justify-content-center">
-                        <img src="assets/tecdevlogo.svg"
+                        <img src="archProjMaster/assets/tecdevlogo.svg"
                              alt=""
                              style="margin-top: 0px; max-height: 100%"
                         >
@@ -669,7 +742,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                             </div>
                                             <div class="modal-body">
 
-                                                <form action="">
+                                                <form id="ajoutp" action="/e_health/AddAll" method="post">
 
                                                     <div class="row">
 
@@ -677,7 +750,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                             <div class="row">
                                                                 <div class="col-12 mb-3">
                                                                     <img class="rounded-circle"
-                                                                         src="assets/admin/ava_doc.png"
+                                                                         src="archProjMaster/assets/admin/ava_doc.png"
                                                                          alt=""
                                                                          width="150px"
                                                                          height="150px"
@@ -697,44 +770,53 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="nom_p_a" placeholder="Nom">
+                                                            <input name="nom_pa" type="text" class="form-control" id="nom_p_a" placeholder="Nom">
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="prenom_p_a" placeholder="Prenom">
+                                                            <input name="prenom_pa" type="text" class="form-control" id="prenom_p_a" placeholder="Prenom">
                                                         </div>
                                                     </div>
 
                                                     <hr>
 
                                                     <div class="row">
-                                                        <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="adr_p_a" placeholder="Address">
-                                                        </div>
+                                                         <div class="col-md-4">
+                                                            <input name="adr_pa" type="text" class="form-control" id="adr_p_a" placeholder="Address">
+                                                         </div>
 
-                                                        <div class="col-md-4">
-                                                            <input type="text" class="form-control" id="num_p_a" placeholder="Num">
-                                                        </div>
+                                                         <div class="col-md-4">
+                                                            <input name="num_pa" type="text" class="form-control" id="num_p_a" placeholder="phone number ">
+                                                         </div>
+ 
+                                                         <div class="col-md-4">
+                                                                <input name="date_pa"  class="form-control" type="date" value="2000-01-01" id="example-date-input">
+                                                         </div>
+                                                    </div>
 
+                                                    <hr>
+                                                   <div class="row">
+                                                         <div class="col-md-4">
+                                                            <input name="age_pa" class="form-control" type="number" value="20" id="example-number-input" placeholder="age">
+                                                         </div>
                                                         <div class="col-md-4">
-                                                            <select id="spe_c_p_a" class="form-control">
-                                                                <option selected>Choose Spec</option>
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>Autre</option>
+                                                            <select name="sexe_pa" id="sexe_d" class="form-control">
+                                                                 <option selected>Choose .. </option>
+                                                                 <option>feminin</option>
+                                                                 <option>masculin</option>
                                                             </select>
+                                                         </div>
                                                         </div>
-                                                    </div>
-
                                                     <hr>
-
                                                     <div class="row">
-                                                        <div class="col-md-4">
-                                                            <input type="password" class="form-control" id="pass_p_a" placeholder="Password">
+                                                       <div class="col-md-4">
+                                                            <input name="log_pa" type="text" class="form-control" id="log_d" placeholder="your login .. ">
                                                         </div>
-
+                                                         <div class="col-md-4">
+                                                            <input name="pass_pa" type="password" class="form-control" id="pass_p_a" placeholder="Password">
+                                                        </div>
                                                         <div class="col-md-4">
-                                                            <input type="password" class="form-control" id="pass_c_p_a" placeholder="Confirm">
+                                                            <input name="pass_cpa" type="password" class="form-control" id="pass_c_p_a" placeholder="Confirm">
                                                         </div>
                                                     </div>
                                                 </form>
@@ -746,7 +828,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                         class="btn btn-secondary"
                                                         data-dismiss="modal"
                                                 >Close</button>
-                                                <button type="button" class="btn btn-primary">Ajouter</button>
+                                           <button name="submit" form="ajoutp" type="submit" value="ajouterP" class="btn btn-primary">Ajouter</button>
                                             </div>
                                         </div>
                                     </div>
@@ -758,31 +840,37 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                 <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
                                     <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nom</th>
                                         <th>Prenom</th>
-                                        <th>Actions</th>
+                                        <th>Adresse</th>
+                                        <th>Age</th>
+                                        <th>Telephone</th>
+                                        <th>mot de passe </th>
+                                         <th>Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody >
-                                    <tr>
-                                        <td>sblabla</td>
-                                        <td>blabla</td>
-                                        <td>blablabla</td>
-                                        <td>
-                                            <a href="#"
-                                               class="btn btn-warning"
-                                               data-toggle="modal"
-                                               data-target="#pat_modal_update">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-danger"
-                                               data-toggle="modal"
-                                               data-target="#pat_modal_delete">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                <%  ok=(String)request.getAttribute("pcrud");
+                                if(ok!=null){
+                                ArrayList<patient> med = (ArrayList<patient>) request.getAttribute("patient");
+                                for(patient item: med){
+                                	out.print("<tr>");
+                                      out.print("<td name='nom_pt'>"); out.print(item.getNom()); out.print("</td>");
+                                      out.print("<td name='prenom_pt'>"); out.print(item.getPrenom());  out.print("</td>");
+                                      out.print("<td>"); out.print(item.getAdresse()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getAge()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getTelephone()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getMotPasse()); out.print("</td>");
+                                         out.print("<td>");
+                                            out.print("<a href='#' class='btn btn-warning' data-toggle='modal' data-target='#pat_modal_update'>");
+                                                out.print("<i class='fas fa-edit'>"); out.print("</i>");
+                                            out.print("</a>");
+                                            out.print("<a href='#' class='btn btn-danger' data-toggle='modal' data-target='#pat_modal_delete'>");
+                                                out.print("<i class='fas fa-trash-alt'>"); out.print("</i>");
+                                            out.print("</a>");
+                                        out.print("</td>");
+                                    out.print("</tr>");
+                                }} %>  
                                     <!-- doc modal update -->
                                     <div class="modal fade"
                                          id="pat_modal_update"
@@ -813,7 +901,7 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                                 <div class="row">
                                                                     <div class="col-12 mb-3">
                                                                         <img class="rounded-circle"
-                                                                             src="assets/admin/ava_doc.png"
+                                                                             src="archProjMaster/assets/admin/ava_doc.png"
                                                                              alt=""
                                                                              width="150px"
                                                                              height="150px"
@@ -833,32 +921,11 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="nom_p" placeholder="Nom">
+                                                                <input  name="nom_p" type="text" class="form-control" id="nom_p" placeholder="Nom">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="prenom_p" placeholder="Prenom">
-                                                            </div>
-                                                        </div>
-
-                                                        <hr>
-
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="adr_p" placeholder="Address">
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <input type="text" class="form-control" id="num_p" placeholder="Num">
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <select id="spe_c_p" class="form-control">
-                                                                    <option selected>Choose Spec</option>
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>Autre</option>
-                                                                </select>
+                                                                <input name="prenom_p" type="text" class="form-control" id="prenom_p" placeholder="Prenom">
                                                             </div>
                                                         </div>
 
@@ -866,11 +933,27 @@ style="border-radius: 50%; height: 55px; width: 55px"
 
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <input type="password" class="form-control" id="pass_p" placeholder="Password">
+                                                                <input name="adr_p" type="text" class="form-control" id="adr_p" placeholder="Address">
                                                             </div>
 
                                                             <div class="col-md-4">
-                                                                <input type="password" class="form-control" id="pass_c_p" placeholder="Confirm">
+                                                                <input name="num_p" type="text" class="form-control" id="num_p" placeholder="Num">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                    <input name="age_p" type="text" class="form-control" id="age_p" placeholder="age">
+                                                          </div>
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <input name="pass_p" type="password" class="form-control" id="pass_p" placeholder="Password">
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <input name="pass_p1" type="password" class="form-control" id="pass_c_p" placeholder="Confirm">
                                                             </div>
                                                         </div>
                                                     </form>
@@ -929,10 +1012,13 @@ style="border-radius: 50%; height: 55px; width: 55px"
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nom</th>
                                         <th>Prenom</th>
-                                        <th>Actions</th>
+                                        <th>Adresse</th>
+                                        <th>Age</th>
+                                        <th>Telephone</th>
+                                        <th>mot de passe </th>
+                                         <th>Actions</th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -958,72 +1044,39 @@ style="border-radius: 50%; height: 55px; width: 55px"
                             <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Prenom</th>
+                                   <th>Lable</th>
+                                    <th>Effets</th>
+                                    <th>Prix</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody >
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                 <%  ok=(String)request.getAttribute("medicrud");
+                                if(ok!=null){
+                                ArrayList<medicament> medi = (ArrayList<medicament>) request.getAttribute("medicament");
+                                for(medicament item: medi){
+                                	out.print("<tr>");
+                                      out.print("<td>"); out.print(item.getLable()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getEffets());  out.print("</td>");
+                                      out.print("<td>"); out.print(item.getPrix()); out.print("</td>");
+                                         
+                                      out.print("<td>");
+                                            out.print("<a href='#' class='btn btn-warning' data-toggle='modal' data-target='#pat_modal_update'>");
+                                                out.print("<i class='fas fa-edit'>"); out.print("</i>");
+                                            out.print("</a>");
+                                            out.print("<a href='#' class='btn btn-danger' data-toggle='modal' data-target='#pat_modal_delete'>");
+                                                out.print("<i class='fas fa-trash-alt'>"); out.print("</i>");
+                                            out.print("</a>");
+                                        out.print("</td>");
+                                    out.print("</tr>");
+                                }} %>
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Prenom</th>
-                                    <th>Actions</th>
+                                   <th>Lable</th>
+                                    <th>Effets</th>
+                                    <th>Prix</th>
+                                     <th>Actions</th>
                                 </tr>
                                 </tfoot>
                             </table>
@@ -1048,71 +1101,38 @@ style="border-radius: 50%; height: 55px; width: 55px"
                             <table class="table table-striped text-center tab" style="width:100% ;background-color: #a9a7e5">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Prenom</th>
+                                    <th>Lable</th>
+                                    <th>Effets</th>
+                                    <th>Prix</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody >
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sblabla</td>
-                                    <td>blabla</td>
-                                    <td>blablabla</td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                              <%  ok=(String)request.getAttribute("hcrud");
+                                if(ok!=null){
+                                ArrayList<medicament> h = (ArrayList<medicament>)request.getAttribute("herbe");
+                                for(medicament item: h){
+                                	out.print("<tr>");
+                                      out.print("<td>"); out.print(item.getLable()); out.print("</td>");
+                                      out.print("<td>"); out.print(item.getEffets());  out.print("</td>");
+                                      out.print("<td>"); out.print(item.getPrix()); out.print("</td>");
+                                         
+                                      out.print("<td>");
+                                            out.print("<a href='#' class='btn btn-warning' data-toggle='modal' data-target='#pat_modal_update'>");
+                                                out.print("<i class='fas fa-edit'>"); out.print("</i>");
+                                            out.print("</a>");
+                                            out.print("<a href='#' class='btn btn-danger' data-toggle='modal' data-target='#pat_modal_delete'>");
+                                                out.print("<i class='fas fa-trash-alt'>"); out.print("</i>");
+                                            out.print("</a>");
+                                        out.print("</td>");
+                                    out.print("</tr>");
+                                }} %>
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nom</th>
-                                    <th>Prenom</th>
+                                    <th>Lable</th>
+                                    <th>Effets</th>
+                                    <th>Prix</th>
                                     <th>Actions</th>
                                 </tr>
                                 </tfoot>
@@ -1131,7 +1151,12 @@ style="border-radius: 50%; height: 55px; width: 55px"
 </div>
 <!-- page-wrapper -->
 </body>
-
+           <script>
+			function getnom(){
+				var nom = document.getElementById('nom_pt').value
+				var prenom = document.getElementById('prenom_pt').value
+				}
+			</script>
 <script>
 
 /*----- sidebar -----*/
@@ -1179,7 +1204,7 @@ $("#pat_crud").css("display", "none");
 /* drugs crud toggles */
 $("#drug_clk").click(function(){
 $("#drug_crud").css("display", "block");
-$("#doc_crud").css("display", "none");
+$("#dash_main").css("display", "none");
 $("#herbo_crud").css("display", "none");
 $("#pat_crud").css("display", "none");
 $("#doc_crud").css("display", "none");

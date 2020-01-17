@@ -35,7 +35,6 @@ public class VersLogin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
 		    String uname = request.getParameter("name");
 		    String upass = request.getParameter("pass");
 		    try {
@@ -58,7 +57,7 @@ ResultSet rs2 = stmt.executeQuery("select * from medecin where login='"+uname+"'
 		    	  HttpSession session =request.getSession();
 		    	 session.setAttribute("name", rs2.getString("nom")+" "+rs2.getString("prenom"));
 		         session.setAttribute("user",rs2.getString("idmedecin"));
-		        response.sendRedirect("/e_health/admin.jsp?page=admin");
+		        response.sendRedirect("/e_health/admin?page=admin");
 		        
 		      }  
 		   

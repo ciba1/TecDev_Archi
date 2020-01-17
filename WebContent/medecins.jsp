@@ -106,7 +106,7 @@
              alt="stethoscope-fond-bleu"
              style="min-height: 350px">
         <div class="card-img-overlay p-5">
-            <h1 class="card-title"><strong>DiagnoVit</strong></h1>
+            <h1 class="card-title"><strong>DZ doc</strong></h1>
             <br><br>
             <p class="card-text">Trouvez rapidement un medecin en algerie et prenez rendez-vous</p>
             <p class="card-text">n'import quoi!!</p>
