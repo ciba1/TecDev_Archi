@@ -1,8 +1,8 @@
+<%@page import="src.maladiePossedeSymptome"%>
 
 <%@ page pageEncoding="UTF-8" %>
 <%@page import="Modele.maladiePossedeSymptome"%>
 
-<%@page import="Modele.maladiePossedeSymptome"%>
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modele.maladie"%>
